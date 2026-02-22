@@ -62,6 +62,20 @@ class LinkedList:
             temp = temp.next
 
     #--------------------------------------
+    # Get list values as a list
+    #--------------------------------------
+    def get_values(self, node=None):
+        if node is None:
+            node = self.head
+        
+        values = []
+        temp = node
+        while temp is not None:
+            values.append(temp.value)
+            temp = temp.next
+        return values
+
+    #--------------------------------------
     # Remove and return last node
     #--------------------------------------
     def pop(self):
